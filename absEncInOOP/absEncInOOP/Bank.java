@@ -52,14 +52,95 @@ public static void main(String[] args)
          //case 1 jab user kehta uska account Saving account hai
          if(c=='s')
          {
-            
-
-
+            System.out.println("Enter Your Account Number - ");
+            String temp=Sc.next();
+            SavingAccount s=sav.get(temp);
+            if(s!=null)
+            {
+                System.out.println("Your Balance is - " +s.getBalance());
+            }
+           else
+           {
+            System.out.println("User Not Found .");
+           }
 
          }
+         else
+            {
+            System.out.println("Enter Your Account Number - ");
+            String temp=Sc.next();
+            CurrentAccount s=cur.get(temp);
+            if(s!=null)
+            {
+                System.out.println("Your Balance is - " +s.getBalance());
+            }
+           else
+           {
+            System.out.println("User Not Found .");
+           }
+
+         }
+
        }
 
+     //case 4 jab user paisa jama kr rha hoga , uska logi niche bnaya hun
 
+        if(imput==4){
+             //dekho yhan main user ko asli azadi de rha hun "Any key " but is azadi ki sart hai user etna samjhe ki saving account ke liye strictly s hi option hai unke pass.
+         System.out.println("Prees 's' if your Account Type id Saving else Press any key ");
+         char c=Sc.next().charAt(0);
+
+         // ab ham user ke account ka nature jan chuke hain so aage dono case ko case 1 case2 bna ke sepreately deal krte hain 
+         //case 1 jab user kehta uska account Saving account hai
+         if(c=='s')
+         {
+            System.out.println("Enter Your Account Number - ");
+            String temp=Sc.next();
+            SavingAccount s=sav.get(temp);
+            if(s!=null)
+            {
+                System.out.println("Enter how much money you want to Deposite in the Indias gretest Bank i.e Bank Of Banaras !");
+
+                double imput=Sc.nextDouble();
+                s.addBalance(imput);
+                System.out.println("Your Now Overall Balance is - " +s.getBalance());
+                if(s.male())
+                System.out.println("Bank of Banaras have very proud on You Ms."+s.getName());
+                else
+                {
+                   System.out.println("Bank of Banaras have very proud on You Mr."+s.getName());
+                 
+                }
+            }
+           else
+           {
+            System.out.println("User Not Found .");
+           }
+
+         }
+         else
+            {
+            System.out.println("Enter How  ");
+            String temp=Sc.next();
+            CurrentAccount s=cur.get(temp);
+            if(s!=null)
+            {
+                System.out.println("Your Balance is - " +s.getBalance());
+            }
+           else
+           {
+            System.out.println("User Not Found .");
+           }
+        }
+
+
+
+
+
+
+
+
+        }
 
 
 
