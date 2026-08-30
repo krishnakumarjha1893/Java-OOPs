@@ -22,7 +22,7 @@ public static void main(String[] args)
        {
             SavingAccount s1=new SavingAccount();
             //here i have two way either i can pass user details through cunstoctor aur via setter method i will prefer second one because in second method i can take value one by one and also can assist our user by printing userchoice ...
-            s1.setter();
+            s1.setter(Sc);
             //ab sab set hogaya value to esko account number ke long map me pair kr lete hain so that future me dekhna retrieve krna data through account number eassy rhe
             sav.put(s1.getAccountNo(), s1);
 
@@ -34,7 +34,7 @@ public static void main(String[] args)
        {
              CurrentAccount c1=new CurrentAccount();
             //here i have two way either i can pass user details through cunstoctor aur via setter method i will prefer second one because in second method i can take value one by one and also can assist our user by printing userchoice ...
-            c1.setter();
+            c1.setter(Sc);
             //ab sab set hogaya value to esko account number ke long map me pair kr lete hain so that future me dekhna retrieve krna data through account number eassy rhe
             cur.put(c1.getAccountNo(), c1);
 
@@ -83,7 +83,7 @@ public static void main(String[] args)
 
        }
 
-     //case 4 jab user paisa jama kr rha hoga , uska logi niche bnaya hun
+     //case 4 jab user paisa jama kr rha hoga , uska logiC niche bnaya hun
 
         if(imput==4){
              //dekho yhan main user ko asli azadi de rha hun "Any key " but is azadi ki sart hai user etna samjhe ki saving account ke liye strictly s hi option hai unke pass.
@@ -101,10 +101,10 @@ public static void main(String[] args)
             {
                 System.out.println("Enter how much money you want to Deposite in the Indias gretest Bank i.e Bank Of Banaras !");
 
-                double imput=Sc.nextDouble();
-                s.addBalance(imput);
+                double tempimput=Sc.nextDouble();
+                s.addBalance(tempimput);
                 System.out.println("Your Now Overall Balance is - " +s.getBalance());
-                if(s.male())
+                if(s.isMale())
                 System.out.println("Bank of Banaras have very proud on You Ms."+s.getName());
                 else
                 {
@@ -142,6 +142,17 @@ public static void main(String[] args)
 
         }
 
+
+//case 5  
+
+
+
+
+
+
+
+
+//case 6
 
 
 
