@@ -6,8 +6,9 @@ public class CurrentAccount extends BankAccount {
 
 
 
-    //private instance of parent class BankAccount  AccontNumber; holderName; balance; gender; AccountType
-    
+    //private instance of parent class BankAccount -> AccontNumber; holderName; balance; gender; AccountType
+    //chuki ye current account hai es liye bank of Banaras overdraft limit v provide krta j ki 10000 hai;
+    final static double OverDraftLimit=10000;
 
 
     public void setter(Scanner Sc)
@@ -16,7 +17,7 @@ public class CurrentAccount extends BankAccount {
         System.out.println("Enter Your Name- ");
         super.setName(Sc.nextLine());
         System.out.println("Enter Your Name- ");
-        super.setAccountNumber(AccountNoGenerator.getSavingAccountNo());
+        super.setAccountNumber(AccountNoGenerator.getCurrentAccountNo());
         setAccountType("Saving Account Type");
         System.out.println("Enter 1 if you are a mail else pree 2 - ");
         int temp=Sc.nextInt();
@@ -42,7 +43,33 @@ public class CurrentAccount extends BankAccount {
         
         }
 
+    }
 
+        //widram methode ko override krna hai
+
+public void withdraw(double amnt)
+{
+    if((this.getBalance()+OverDraftLimit)>=amnt){
+
+        this.setBalance(this.getBalance()-amnt);
+    }
+    else 
+    {
+        System.out.println("Your over Draft Limit is 10 K and Your balance is low i.e " +this.getBalance() +"so enter according to it ");
+    }
+}
+
+//view passbok ke liye passbook na ka methode bnate han dno e saving and current me
+
+public void passBook()
+{
+    System.out.println("Name - "+this.getName());
+    System.out.println("Gender - "+this.getGender());
+    System.out.println("Account Type - "+this.GetAccountType());
+    System.out.println("Acccount Number - "+this.getAccountNo());
+    System.out.println("Balance -  "+this.getBalance());
+
+}
 
         
 
@@ -57,6 +84,6 @@ public class CurrentAccount extends BankAccount {
 
 
 
+
     
-    
-}
+

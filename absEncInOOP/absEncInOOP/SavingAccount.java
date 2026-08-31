@@ -45,5 +45,34 @@ public class SavingAccount extends BankAccount {
         
 
     }
+
+    public void passBook()
+{
+    System.out.println("Name - "+this.getName());
+    System.out.println("Gender - "+this.getGender());
+    System.out.println("Account Type - "+this.GetAccountType());
+    System.out.println("Acccount Number - "+this.getAccountNo());
+    System.out.println("Balance -  "+this.getBalance());
+    
+}
+
+public void withdraw(double amnt)
+{
+    if(this.getBalance()>=amnt){
+
+        this.setBalance(this.getBalance()-amnt);
+    }
+    else 
+    {
+        System.out.println("Your over Draft Limit is 10 K and Your balance is low i.e " +this.getBalance() +"so enter according to it ");
+    }
+}
+
+
+
+
+
+
+
     
 }

@@ -28,9 +28,9 @@ public static void main(String[] args)
 
        }
 
-       //case 2 jb user option 2 chunega to mai saving account khol rha hun
+       //case 2 jb user option 2 chunega to mai current account khol rha hun
 
-       if(imput==2)
+      else if(imput==2)
        {
              CurrentAccount c1=new CurrentAccount();
             //here i have two way either i can pass user details through cunstoctor aur via setter method i will prefer second one because in second method i can take value one by one and also can assist our user by printing userchoice ...
@@ -42,7 +42,7 @@ public static void main(String[] args)
 
        //case 3 jb user option 3 chunega to mai Balance check kr rha hun
 
-       if(imput==3)
+     else  if(imput==3)
        {
         //dekho yhan main user ko asli azadi de rha hun "Any key " but is azadi ki sart hai user etna samjhe ki saving account ke liye strictly s hi option hai unke pass.
          System.out.println("Prees 's' if your Account Type id Saving else Press any key ");
@@ -85,7 +85,8 @@ public static void main(String[] args)
 
      //case 4 jab user paisa jama kr rha hoga , uska logiC niche bnaya hun
 
-        if(imput==4){
+else if(imput==4)
+    {
              //dekho yhan main user ko asli azadi de rha hun "Any key " but is azadi ki sart hai user etna samjhe ki saving account ke liye strictly s hi option hai unke pass.
          System.out.println("Prees 's' if your Account Type id Saving else Press any key ");
          char c=Sc.next().charAt(0);
@@ -133,34 +134,56 @@ public static void main(String[] args)
            }
         }
 
+    }
 
 
+//case 5  Withdra ka logic
+else if(imput==5)
+{
+      System.out.println("Enter 1 for Saving Account and 2 for current Account");
+     int a=Sc.nextInt();
+     System.out.println("Enter Account Number- ");
+     String st=Sc.next();
+     System.out.println("Enter How much money you want to withdraw- ");
+     double amnt=Sc.nextDouble();
+     if((a==1) && (sav.containsKey(st)))
+     {
+            sav.get(st).withdraw(amnt);
+     }
+     else if((a==2) && (cur.containsKey(st)))
+     {
+            cur.get(st).withdraw(amnt);
+     }
+     else
+     {
+        System.out.println("User Not found....");
+     }
+}
 
 
+//case 6 viewing PassBook ka logic
 
+else if(imput==6)
+{
 
+     System.out.println("Enter 1 for Saving Account and 2 for current Account");
+     int a=Sc.nextInt();
+     System.out.println("Enter Account Number- ");
+     String st=Sc.next();
+     if((a==1) && (sav.containsKey(st)))
+     {
+            sav.get(st).passBook();
+     }
+     else if((a==2) && (cur.containsKey(st)))
+     {
+            cur.get(st).passBook();
+     }
+     else
+     {
+        System.out.println("User Not found....");
+     }
 
-        }
-
-
-//case 5  
-
-
-
-
-
-
-
-
-//case 6
-
-
-
-
-
-
-
-
+}
 
 
 

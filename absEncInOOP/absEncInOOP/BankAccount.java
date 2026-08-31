@@ -51,7 +51,7 @@ public String getAccountNo()
     return this.AccontNumber;
 }
 
-public void withdraw(int amnt)
+public void withdraw(double amnt)
 {
     this.balance=(this.balance-amnt);
 }
@@ -65,6 +65,9 @@ public void setGender(char c)
 {
     this.gender=c;
 }
-
+public char getGender()
+{
+   return this.gender;
+}
 
 }
