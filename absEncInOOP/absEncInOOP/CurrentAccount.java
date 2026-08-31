@@ -16,9 +16,8 @@ public class CurrentAccount extends BankAccount {
         System.out.println("Enter Your Detail Very Carefully");
         System.out.println("Enter Your Name- ");
         super.setName(Sc.nextLine());
-        System.out.println("Enter Your Name- ");
         super.setAccountNumber(AccountNoGenerator.getCurrentAccountNo());
-        setAccountType("Saving Account Type");
+        setAccountType("Current Account Type");
         System.out.println("Enter 1 if you are a mail else pree 2 - ");
         int temp=Sc.nextInt();
         if(temp==1)

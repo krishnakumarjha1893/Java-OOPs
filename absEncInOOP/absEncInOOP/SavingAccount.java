@@ -13,7 +13,6 @@ public class SavingAccount extends BankAccount {
         System.out.println("Enter Your Detail Very Carefully");
         System.out.println("Enter Your Name- ");
         super.setName(Sc.nextLine());
-        System.out.println("Enter Your Name- ");
         super.setAccountNumber(AccountNoGenerator.getSavingAccountNo());
         setAccountType("Saving Account Type");
         System.out.println("Enter 1 if you are a mail else pree 2 - ");

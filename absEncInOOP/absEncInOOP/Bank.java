@@ -11,10 +11,12 @@ public static void main(String[] args)
 
         Scanner Sc=new Scanner(System.in);
 
-
+ boolean check=true;
+ while(check){
         System.out.println("Welocme to the Bank of Banaras ! A bank that is Under development so please be careful and type Any Integer Between [1,6] ,If you press other key then you are just a evil Human bieng now let's Start Enter 1 for Opening Saving Account,Enter 2 for Opening Current Account,Enter 3 for Balance Check,Enter 4 for Deposite Money,Enter 5 for Credit money,Enter 6 for viewing Passbok- ");
-        
+       
         int imput=Sc.nextInt();
+        Sc.nextLine();
 
         //case 1 jb user option 1 chunega to mai saving account khol rha hun
 
@@ -184,9 +186,18 @@ else if(imput==6)
      }
 
 }
+else if(imput==7)
+{
+    System.out.println("Thankyou for using Bank of Banaras!");
+    check=false;
+    break;
+}
+else{
+    System.out.println("Enter Correct Integer among 1,2,3,4,5,6,7...");
+}
 
 
-
+ }
 
 
         Sc.close();
