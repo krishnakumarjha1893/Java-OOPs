@@ -2,7 +2,7 @@
 
 A beginner-friendly Java Banking System created to practice **Object-Oriented Programming (OOP)** and Java Collections.
 
-## 📌 Features
+## 📌 Features  
 
 - Customer registration
 - Employee registration
